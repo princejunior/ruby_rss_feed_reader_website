@@ -1,0 +1,13 @@
+
+<h1>Feeds</h1>
+<!-- Link to create a new feed -->
+<%= link_to 'New Feed', new_feed_path %>
+<ul>
+  <!-- Loop through each feed and create a list item with a link to the feed's entries -->
+  <% @feeds.each do |feed| %>
+    <li>
+      <%= link_to feed.title, feed_entries_path(feed) %>
+    </li>
+  <% end %>
+</ul>
+

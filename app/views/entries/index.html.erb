@@ -1,0 +1,11 @@
+<h1>Entries for <%= @feed.title %></h1>
+<ul>
+  <!-- Loop through each entry and create a list item with a link to the entry's details -->
+  <% @entries.each do |entry| %>
+    <li>
+      <%= link_to entry.title, feed_entry_path(@feed, entry) %>
+      <p><%= entry.summary %></p>
+    </li>
+  <% end %>
+</ul>
+
