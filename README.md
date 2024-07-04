@@ -63,3 +63,4 @@ rails db:create
 - app/controllers/entries_controller.rb
 
 ### 11. Test Your Application
+- rails server
